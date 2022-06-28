@@ -12,6 +12,10 @@ export const Container = styled.div`
     width: 600px;
     height: 600px;
 
+    @media (max-width: 900px) {
+      width: 300px;
+      height: 300px;
+    }
     > div {
       height: 100%;
       width: 100%;
@@ -39,8 +43,9 @@ export const Container = styled.div`
       z-index: 999;
 
       :hover {
-        filter: brightness(110%);
+        filter: brightness(150%);
         animation: rotate-scale-up 0.65s infinite;
+
         @keyframes rotate-scale-up {
           0% {
             transform: scale(1) rotateZ(0);
@@ -57,6 +62,10 @@ export const Container = styled.div`
       > img {
         width: 100px;
         height: 100px;
+        @media (max-width: 900px) {
+          width: 50px;
+          height: 50px;
+        }
       }
     }
   }
