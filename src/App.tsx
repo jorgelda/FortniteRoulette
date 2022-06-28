@@ -2,12 +2,12 @@ import { useState } from 'react'
 import { Wheel } from 'react-custom-roulette'
 
 import Llama from './assets/llama.png'
+import Sound from './assets/sound.mp3'
 
 import { Container } from './styles'
 
 function App() {
   const [spin, setSpin] = useState<boolean>(false)
-
   const data = [
     { option: 'Condomínio Vários Djanho' },
     { option: 'Circuito Muito Djanho' },
@@ -51,6 +51,7 @@ function App() {
           <button
             onClick={() => {
               setSpin(true)
+              new Audio(Sound).play()
             }}
           >
             <img src={Llama} alt="Girar" />
