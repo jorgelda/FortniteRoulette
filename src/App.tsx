@@ -37,7 +37,11 @@ function App() {
             onStopSpinning={() => {
               setSpin(false)
             }}
-            fontSize={13}
+            outerBorderColor={'transparent'}
+            radiusLineColor={'transparent'}
+            outerBorderWidth={1}
+            radiusLineWidth={1}
+            fontSize={12}
             backgroundColors={[
               '#9400D3',
               '#4B0082',

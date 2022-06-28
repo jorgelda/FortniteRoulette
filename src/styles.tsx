@@ -7,11 +7,9 @@ export const Container = styled.div`
   min-height: 100vh;
   width: 100%;
   z-index: 100;
-
   .parent-container {
     width: 600px;
     height: 600px;
-
     @media (max-width: 900px) {
       width: 300px;
       height: 300px;
@@ -45,7 +43,6 @@ export const Container = styled.div`
       :hover {
         filter: brightness(150%);
         animation: rotate-scale-up 0.65s infinite;
-
         @keyframes rotate-scale-up {
           0% {
             transform: scale(1) rotateZ(0);
