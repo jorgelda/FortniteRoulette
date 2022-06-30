@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const Container = styled.div<{ spinning: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,20 +39,24 @@ export const Container = styled.div`
       margin-left: auto;
       margin-right: auto;
       z-index: 999;
-
       :hover {
         filter: brightness(150%);
-        animation: rotate-scale-up 0.65s infinite;
-        @keyframes rotate-scale-up {
-          0% {
-            transform: scale(1) rotateZ(0);
-          }
-          50% {
-            transform: scale(2) rotateZ(180deg);
-          }
-          100% {
-            transform: scale(1) rotateZ(360deg);
-          }
+      }
+      animation: rotate-scale-up 0.6s infinite;
+      ${({ spinning }) =>
+        spinning
+          ? `animation-play-state: running;`
+          : ` animation-play-state: paused;`};
+
+      @keyframes rotate-scale-up {
+        0% {
+          transform: scale(1) rotateZ(0);
+        }
+        50% {
+          transform: scale(2) rotateZ(180deg);
+        }
+        100% {
+          transform: scale(1) rotateZ(360deg);
         }
       }
 

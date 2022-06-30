@@ -27,13 +27,13 @@ function App() {
 
   return (
     <div className="App">
-      <Container>
+      <Container spinning={spin}>
         <div className="parent-container">
           <Wheel
             mustStartSpinning={spin}
             prizeNumber={Math.floor(Math.random() * (14 - 0 + 1) + 0)}
             data={data}
-            spinDuration={Math.random() + 0.25}
+            spinDuration={0.62}
             onStopSpinning={() => {
               setSpin(false)
             }}
@@ -53,6 +53,7 @@ function App() {
             ]}
           />
           <button
+            disabled={spin}
             onClick={() => {
               setSpin(true)
               new Audio(Sound).play()
