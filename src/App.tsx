@@ -2,7 +2,8 @@ import { useState } from 'react'
 import { Wheel } from 'react-custom-roulette'
 
 import Llama from './assets/llama.png'
-import Sound from './assets/sound.mp3'
+import SpinSound from './assets/sound.mp3'
+import Pare from './assets/pare.mp3'
 
 import { Container } from './styles'
 
@@ -31,7 +32,7 @@ function App() {
         <div className="parent-container">
           <Wheel
             mustStartSpinning={spin}
-            prizeNumber={Math.floor(Math.random() * (14 - 0 + 1) + 0)}
+            prizeNumber={Math.floor(Math.random() * (data.length - 0 + 1) + 0)}
             data={data}
             spinDuration={0.62}
             onStopSpinning={() => {
@@ -56,7 +57,10 @@ function App() {
             disabled={spin}
             onClick={() => {
               setSpin(true)
-              new Audio(Sound).play()
+              new Audio(SpinSound).play()
+              setTimeout(() => {
+                new Audio(Pare).play()
+              }, 6500)
             }}
           >
             <img src={Llama} alt="Girar" />
