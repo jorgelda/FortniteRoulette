@@ -4,6 +4,7 @@ import { Wheel } from 'react-custom-roulette'
 import Llama from './assets/llama.png'
 import SpinSound from './assets/sound.mp3'
 import Pare from './assets/pare.mp3'
+import Uepa from './assets/uepa.mp3'
 
 import { Container } from './styles'
 
@@ -56,11 +57,14 @@ function App() {
           <button
             disabled={spin}
             onClick={() => {
+              new Audio(Uepa).play()
               setSpin(true)
-              new Audio(SpinSound).play()
+              setTimeout(() => {
+                new Audio(SpinSound).play()
+              }, 500)
               setTimeout(() => {
                 new Audio(Pare).play()
-              }, 6500)
+              }, 7000)
             }}
           >
             <img src={Llama} alt="Girar" />
