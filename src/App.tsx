@@ -24,7 +24,11 @@ function App() {
     { option: 'O Djanhim Diário' },
     { option: 'Minas Djaneiras' },
     { option: 'Caverna do Djanho' },
-    { option: 'Djanho Cremoso' }
+    { option: 'Djanho Cremoso' },
+    {
+      option: 'Yan decide',
+      style: { backgroundColor: '#ff007f', textColor: 'yellow' }
+    }
   ]
 
   return (
