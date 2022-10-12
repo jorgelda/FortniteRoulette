@@ -11,24 +11,23 @@ import { Container } from './styles'
 function App() {
   const [spin, setSpin] = useState<boolean>(false)
   const data = [
-    { option: 'Condomínio Vários Djanho' },
-    { option: 'Circuito Muito Djanho' },
-    { option: 'Lenharinha Haja Djanho' },
-    { option: 'Estação do Djanho' },
-    { option: 'Bosque do Djanho' },
-    { option: 'Caverna do Djanho' },
-    { option: 'Toada do Djanho' },
-    { option: 'Bobinhas do Djanho' },
-    { option: 'Os Djanhosies' },
-    { option: 'Djanhuário' },
-    { option: 'O Djanhim Diário' },
-    { option: 'Minas Djaneiras' },
-    { option: 'Caverna do Djanho' },
-    { option: 'Djanho Cremoso' },
-    {
-      option: 'Yan decide',
-      style: { backgroundColor: '#ff007f', textColor: 'yellow' }
-    }
+    { option: 'Greasy Grove' },
+    { option: 'Sleepy Sound' },
+    { option: 'Chonkers Speedway' },
+    { option: 'Rocky Reels' },
+    { option: 'Tilted Towers' },
+    { option: 'Synapse Station' },
+    { option: 'Rave Cave' },
+    { option: 'Logjam Junction' },
+    { option: 'Fort Jonesy' },
+    { option: 'Heralds Sanctum' },
+    { option: 'Shimmering Shrine' },
+    { option: 'Lustrous Lagoon' },
+    { option: 'Reality Tree' },
+    { option: 'Cloudy Condos' },
+    { option: 'Grim Gables' },
+    { option: 'Chrome Crossroads' },
+    { option: 'Flutter Barn' }
   ]
 
   return (
@@ -49,13 +48,23 @@ function App() {
             radiusLineWidth={1}
             fontSize={12}
             backgroundColors={[
-              '#9400D3',
-              '#4B0082',
-              '#0000FF',
-              '#00FF00',
-              '#FFFF00',
-              '#FF7F00',
-              '#FF0000'
+              '#1C1C1C',
+              '#CAC4B0',
+              '#7D8471',
+              '#8D948D',
+              '#B32428',
+              '#FAD201',
+              '#FFFFFF',
+              '#633A34',
+              '#755C48',
+              '#F4A900',
+              '#FFFFFF',
+              '#7FB5B5',
+              '#89AC76',
+              '#3E5F8A',
+              '#FF2301',
+              '#592321',
+              '#6F4F28'
             ]}
           />
           <button
@@ -68,7 +77,7 @@ function App() {
               }, 500)
               setTimeout(() => {
                 new Audio(Pare).play()
-              }, 7000)
+              }, 6700)
             }}
           >
             <img src={Llama} alt="Girar" />
